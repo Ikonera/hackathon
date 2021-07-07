@@ -8,7 +8,10 @@ const style = makeStyles({
 		position: "relative",
 		bottom: '0',
 		width: "100%",
-		color: "white"
+		color: "white",
+	},
+	text: {
+		margin: "5% 0"
 	}
 })
 
@@ -17,14 +20,14 @@ const Footer: FunctionComponent = () => {
 	const classes = style()
 
 	return (
-		<Grid container justifyContent="space-around" component="footer" className={ classes.footer }>
-				<Grid item alignContent="center">
-					<Typography>
+		<Grid container justifyContent="space-around" alignItems="center" component="footer" className={ classes.footer }>
+				<Grid item>
+					<Typography className={ classes.text }>
 						Copyright &copy; 2021 Fantine #JVJ
 					</Typography>
 				</Grid>
-				<Grid item alignContent="center">
-					<Typography>
+				<Grid item>
+					<Typography className={classes.text}>
 						Mentions légales
 					</Typography>
 				</Grid>
