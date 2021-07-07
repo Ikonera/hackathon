@@ -3,6 +3,7 @@ import { Grid, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core"
 import consoRank from "../../assets/images/conso-rank.png"
 import { InsertEmoticon } from "@material-ui/icons"
+import Firebase from "../../utils/firebase"
 
 const styles = makeStyles({
     blockCommon: {
@@ -21,6 +22,16 @@ const styles = makeStyles({
 const ProfilePage: FunctionComponent = () =>
 {
     const classes = styles()
+
+    Firebase.auth().createUserWithEmailAndPassword('killian.fouquet@estiam.com', 'azerty')
+    .then((userCredential) => {
+        // Signed in 
+        var user = userCredential.user;
+        console.log(user)
+    })
+    .catch((error) => {
+        console.log(error)
+    });
 
     return (
         <>
