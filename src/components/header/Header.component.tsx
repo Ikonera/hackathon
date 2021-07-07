@@ -1,19 +1,27 @@
 import React, { FunctionComponent } from "react"
-import { AppBar, Grid } from "@material-ui/core"
+import { AppBar, Toolbar, Grid } from "@material-ui/core"
+import { SentimentSatisfied, ExitToAppRounded } from "@material-ui/icons"
 
 
 const Header: FunctionComponent = () =>
 {
     return (
         <AppBar position="static" style={{ backgroundColor: "#83D357" }}>
-            <Grid container>
-                <Grid item>
-                    Fantine #JVJ
+            <Toolbar>
+                <Grid container justifyContent="space-around">
+                    <Grid item container alignItems="center">
+                        <Grid item>
+                            <SentimentSatisfied fontSize="default" style={{ fontSize: "36px" }}/>
+                        </Grid>
+                        <Grid item style={{ fontSize: "36px" }}>
+                            &nbsp;Fantine #JVJ
+                        </Grid>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid item>
-                Icon deco
-            </Grid>
+                <Grid>
+                    <ExitToAppRounded fontSize="default" style={{ fontSize: "36px" }} />
+                </Grid>
+            </Toolbar>
         </AppBar>
     )
 }
