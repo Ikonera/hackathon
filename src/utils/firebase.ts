@@ -4,15 +4,13 @@ import 'firebase/database';
 
 
 const config = {
-
-    apiKey: "AIzaSyCUx8TB88GgMtNLoMfoYI16SrlInDB9zxY",
+  apiKey: "AIzaSyBM6m7RaUIBZ0zZFnk5wYI1EwkLTZVyOwQ",
     authDomain: "fantine-3d6fd.firebaseapp.com",
     databaseURL: "https://fantine-3d6fd-default-rtdb.europe-west1.firebasedatabase.app/",
     projectId: "fantine-3d6fd",
     storageBucket: "fantine-3d6fd.appspot.com",
     messagingSenderId: "10229391457",
     appId: "1:10229391457:web:3a3c1fb88a8cc1da8a0a20"
-
 };
 
 Firebase.initializeApp(config);

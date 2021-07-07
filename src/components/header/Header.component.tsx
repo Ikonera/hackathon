@@ -11,7 +11,7 @@ const Header: FunctionComponent = () =>
                 <Grid container justifyContent="space-around">
                     <Grid item container alignItems="center">
                         <Grid item>
-                            <SentimentSatisfied fontSize="default" style={{ fontSize: "36px" }}/>
+                            <SentimentSatisfied fontSize="medium" style={{ fontSize: "36px" }}/>
                         </Grid>
                         <Grid item style={{ fontSize: "36px" }}>
                             &nbsp;Fantine #JVJ
@@ -19,7 +19,7 @@ const Header: FunctionComponent = () =>
                     </Grid>
                 </Grid>
                 <Grid>
-                    <ExitToAppRounded fontSize="default" style={{ fontSize: "36px" }} />
+                    <ExitToAppRounded fontSize="medium" style={{ fontSize: "36px" }} />
                 </Grid>
             </Toolbar>
         </AppBar>
