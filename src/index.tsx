@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useEffect } from "react"
+import React, { FunctionComponent, useEffect } from "react"
 import ReactDOM from "react-dom"
 import { BrowserRouter as Router } from "react-router-dom"
 import Footer from "./components/footer/Footer.component"
@@ -8,39 +8,37 @@ import { CssBaseline } from "@material-ui/core"
 import { Auth, UserContext } from "./utils/firebase"
 
 
-const App: FunctionComponent = () =>
-{
+const App: FunctionComponent = () => {
 
-    const user = UserContext
+  const [user, setUser] = React.useState(null);
+  const [initialized, setInitialized] = React.useState(false);
 
+  const userContext = {
+    user, isAuthenticated: () => {
+      return Boolean(user?.uid);
+    }
+  };
 
-    useEffect(() =>
-    {
-        Auth.onAuthStateChanged(user => {
-            return {
-                user, isAuthenticated: () => {
-                    return Boolean(user?.uid)
-                }
-            }
-        })
-    }, [])
+  useEffect(() => {
+    Auth.onAuthStateChanged(user => {
+      setUser(user);
+      setInitialized(true);
+    });
+  }, []);
 
-    let userCtxt = useContext(UserContext)
-
-    return (
-        <UserContext.Provider value={userCtxt}>
-            <CssBaseline />
-            <Header />
-            <RouterOutlet />
-            <Footer />
-        </UserContext.Provider>
-    )
+  return (
+    <UserContext.Provider value={userContext}>
+      <CssBaseline />
+      <Header />
+      <RouterOutlet />
+      <Footer />
+    </UserContext.Provider>
+  )
 }
 
-
 ReactDOM.render(
-    <Router>
-        <App />
-    </Router>,
-    document.querySelector("#root")
-)
+  <Router>
+    <App />
+  </Router>,
+  document.querySelector("#root")
+);

@@ -7,3 +7,4 @@ npm-lock.json
 pnpm-debug.log*
 npm-debug.log*
 .env
+.idea
