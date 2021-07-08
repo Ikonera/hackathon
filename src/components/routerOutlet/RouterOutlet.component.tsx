@@ -6,6 +6,7 @@ import LoginPage from "../loginPage/LoginPage.component"
 import ProfilePage from "../profilePage/ProfilePage.component"
 import forms from "../forms/forms";
 import HomePage from "../homePage/HomePage.component"
+import AdvicePage from "../AdvicePage/AdvicePage.component";
 
 
 const RouterOutlet: FunctionComponent = () =>
@@ -18,6 +19,7 @@ const RouterOutlet: FunctionComponent = () =>
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/infos" component={InformationPage} />
             <Route exact path="/contact" component={ContactPage} />
+            <Route exact path="/advice" component={AdvicePage} />
         </Switch>
     )
 }
