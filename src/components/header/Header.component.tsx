@@ -1,6 +1,20 @@
 import React, { FunctionComponent } from "react"
-import { AppBar, Toolbar, Grid } from "@material-ui/core"
+import {AppBar, Toolbar, Grid, Typography, Button} from "@material-ui/core"
 import { SentimentSatisfied, ExitToAppRounded } from "@material-ui/icons"
+
+
+const NavBar: FunctionComponent = () => {
+    return (
+        <AppBar position="static" style={{ backgroundColor: "#83D357" }}>
+            <Toolbar>
+                <Typography variant="h6" > Fantine - JVJ </Typography>
+                <Button color="inherit"> Formulaire </Button>
+            </Toolbar>
+        </AppBar>
+    )
+}
+
+export default NavBar
 
 
 const Header: FunctionComponent = () =>
@@ -26,4 +40,4 @@ const Header: FunctionComponent = () =>
     )
 }
 
-export default Header
+//export default Header

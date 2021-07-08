@@ -2,7 +2,7 @@ import React, { FunctionComponent, useContext, useEffect } from "react"
 import ReactDOM from "react-dom"
 import { BrowserRouter as Router } from "react-router-dom"
 import Footer from "./components/footer/Footer.component"
-import Header from "./components/header/Header.component"
+import NavBar from "./components/header/Header.component"
 import RouterOutlet from "./components/routerOutlet/RouterOutlet.component"
 import { CssBaseline } from "@material-ui/core"
 import { Auth, UserContext } from "./utils/firebase"
@@ -30,7 +30,7 @@ const App: FunctionComponent = () =>
     return (
         <UserContext.Provider value={userCtxt}>
             <CssBaseline />
-            <Header />
+            <NavBar />
             <RouterOutlet />
             <Footer />
         </UserContext.Provider>
