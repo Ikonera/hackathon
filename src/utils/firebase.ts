@@ -12,7 +12,6 @@ const config = {
     storageBucket: "fantine-3d6fd.appspot.com",
     messagingSenderId: "10229391457",
     appId: "1:10229391457:web:3a3c1fb88a8cc1da8a0a20"
-
 };
 
 Firebase.initializeApp(config);
@@ -20,9 +19,6 @@ Firebase.initializeApp(config);
 export default Firebase;
 export const Auth = Firebase.auth();
 export const Database = Firebase.database();
-
-
-
 
 export const createUniqueKey = () => {
   return Database.ref('/').push().key;
