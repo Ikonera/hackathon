@@ -5,12 +5,14 @@ import InformationPage from "../informationsPage/InformationsPage.component"
 import LoginPage from "../loginPage/LoginPage.component"
 import ProfilePage from "../profilePage/ProfilePage.component"
 import forms from "../forms/forms";
+import HomePage from "../homePage/HomePage.component"
 
 
 const RouterOutlet: FunctionComponent = () =>
 {
     return (
         <Switch>
+            <Route exact path='/' component={HomePage} />
             <Route exact path="/profile" component={ProfilePage} />
             <Route exact path="/forms" component={forms} />
             <Route exact path="/login" component={LoginPage} />
