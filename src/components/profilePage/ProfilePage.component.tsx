@@ -26,16 +26,6 @@ const ProfilePage: FunctionComponent = () =>
 {
   const classes = styles();
 
-  /*Firebase.auth().createUserWithEmailAndPassword('killian.fouquet@estiam.com', 'azerty')
-  .then((userCredential) => {
-      // Signed in
-      var user = userCredential.user;
-      console.log(user)
-  })
-  .catch((error) => {
-      console.log(error)
-  });*/
-
   return (
     <>
       <section>
